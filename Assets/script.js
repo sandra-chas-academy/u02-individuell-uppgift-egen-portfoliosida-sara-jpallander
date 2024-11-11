@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let menuHidden = true;
 
+    const url = "./Assets/cv.json";
+
     menuBtn.addEventListener('click', function() {
 
         if(menuHidden) {
@@ -32,5 +34,30 @@ document.addEventListener('DOMContentLoaded', function() {
     emailLogo.addEventListener('mouseleave', function () {
         emailModule.style.display = "none";
     });
+
+    async function getCV() {
+
+        try {
+
+            const response = await fetch(url);
+
+            if(!response.ok) {
+
+                throw new Error(response.status);
+            };
+
+            const data = await response.json();
+
+            console.log(data.work);
+            console.log(data.education);
+
+        } catch (error) {
+            
+            console.log(error)
+        };
+
+    };
+
+    getCV();
 
 });
