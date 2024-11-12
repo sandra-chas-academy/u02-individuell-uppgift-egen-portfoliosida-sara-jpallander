@@ -1,0 +1,48 @@
+{
+    "work": [
+        {
+            "company": "Apoteket",
+            "title": "Cashier & maintenance",
+            "duration": "Jun 2016 - Aug 2019",
+            "tempo": "Part-time"
+        },
+
+        {
+            "company": "Synsam",
+            "title": "Registered Optician",
+            "duration": "Jul 2021 - Apr 2023",
+            "tempo": "Full-time"
+        },
+
+        {
+            "company": "Actus People",
+            "title": "Consultant Optician",
+            "duration": "Apr 2023 - Current",
+            "tempo": "Full-time"
+        }
+    ],
+
+    "education": [
+        {
+            "school": "Rinmangymnasiet",
+            "major": "Natura Science Program",
+            "duration": "Aug 2014 - Jun 2017",
+            "tempo": "Full-time"
+        },
+
+        {
+            "school": "Karolinska Institute",
+            "major": "Optometry",
+            "duration": "Aug 2018 - Jun 2021",
+            "tempo": "Full-time"
+        }, 
+
+        {
+            "school": "Chas Academy",
+            "major": "Fullstack JavaScript",
+            "duration": "Sep 2024 - Jun 2026",
+            "tempo": "Full-time"
+        }
+    ]
+
+}
