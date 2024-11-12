@@ -7,6 +7,10 @@
     
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Mobile first*/
 /* Minsta skärmbredd jag lyckas anpassa den till är 360px istället för
    320px som är standard minsta bredd att anpassa till. */
