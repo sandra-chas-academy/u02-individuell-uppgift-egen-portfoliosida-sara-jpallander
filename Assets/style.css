@@ -150,12 +150,74 @@ main {
     color: var(--misc);
 }
 
-.headshot {
-    width: 40%;
-    margin: 2rem 0 1.5rem 0;
-    border-radius: 50%;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+#cv-section {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0;
+}
+
+#card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#card-container h2 {
+    color: var(--text-color);
+    margin: 1rem 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 10px;
+}
+
+#placeholder-img {
+    width: 3rem;
     align-self: center;
+}
+
+.avatar {
+    height: fit-content;
+    border-radius: 10px 10px 0 0 ;
+}
+
+#repos-list {
+    height: 4rem;
+    overflow-y: hidden;
+    border: 2px solid var(--highlight);
+}
+
+.card ul li {
+    list-style: none;
+    border-bottom: 2px solid var(--highlight);
+    line-height: 1rem;
+    padding: 1rem;
+}
+
+.card ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.card ul li a:hover {
+    color: var(--highlight);
+}
+
+#expand-btn {
+    all: unset;
+    color: var(--highlight-decoration);
+    background-color: var(--highlight);
+    text-align: center;
+    padding: 1rem 0;
+    border-radius: 0 0 10px 10px;
+    cursor: pointer;
 }
 
 .tempo {
@@ -210,7 +272,7 @@ main {
 }
 
 #hire-me-btn {
-    margin-bottom: 0.5rem;
+    margin: 0.5rem 0;
     padding: 0.7rem;
     border: 0.15rem solid var(--highlight-decoration);
     background-color: var(--highlight-decoration);
@@ -260,16 +322,34 @@ hr {
 }
 
 .sticker {
-    font-size: 6rem;
+    font-size: 7rem;
     font-weight: 300;
-    padding: 3.5rem 2rem;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+    margin: 1rem 0;
+    background-image: linear-gradient(60deg, var(--highlight-decoration), var(--highlight));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-    animation-name: pink-rainbow-text;
-    animation-duration: 7s;
-    animation-iteration-count: infinite;
+#contact {
+    color: var(--text-color);
+    line-height: 2rem;
+    font-size: large;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-me-socials {
+    display: flex;
+    margin: 0.5rem 0;
+    gap: 0.8rem;
+}
+
+.contact-me-socials svg, .contact-me-socials svg path{
+    fill: var(--text-color);
+    width: 3rem;
+    height: 3rem;
 }
 
 footer {
@@ -279,9 +359,7 @@ footer {
 }
 
 footer p {
-    /* position: absolute; */
     text-align: center;
-    /* bottom: 0; */
     padding: 0.8rem;
     color: var(--text-color);
     background-color: var(--background);
@@ -333,6 +411,10 @@ footer p span {
     .tempo {
         font-size: 0.8rem;
     }
+
+    .card {
+        width: 100%;
+    }
 }
 
 @media (min-width: 450px) {
@@ -341,6 +423,10 @@ footer p span {
         font-size: 12rem;
         right: -1.2rem;
         top: 7.7rem;
+    }
+
+    .card {
+        width: 85%;
     }
 }
 

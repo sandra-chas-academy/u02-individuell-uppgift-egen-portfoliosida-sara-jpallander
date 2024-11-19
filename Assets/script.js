@@ -12,10 +12,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const hireMeModule = document.getElementById('hire-me-modal');
     const modalCloseBtn = document.getElementById('modal-close-btn');
 
+    const reposList = document.getElementById('repos-list');
+    const expandBtn = document.getElementById('expand-btn');
+
     let menuHidden = true;
     let modalHidden = true;
+    let listHidden = true;
 
     const url = "./Assets/cv.json";
+
+    const gitAPI = "https://api.github.com/users/sara-jpallander/repos";
 
 
     menuBtn.addEventListener('click', function() {
@@ -76,10 +82,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const workExp = data.work;
         const educationExp = data.education;
-        console.log(workExp);
-        console.log(educationExp);
-
-        //console.log(workExp.company);
 
         workExp.forEach((item) => {
 
@@ -87,8 +89,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const title = item.title;
             const duration = item.duration;
             const tempo = item.tempo;
-
-            // console.log(company, title, duration, tempo)
 
             const container = document.createElement('div');
             container.classList.add('work-container');
@@ -104,7 +104,6 @@ document.addEventListener('DOMContentLoaded', function() {
             section.appendChild(titleElement);
             section.appendChild(companyElement);
             container.appendChild(section);
-            //workSection.appendChild(section);
 
             const div2 = document.createElement('div');
             div2.classList.add('right');
@@ -131,8 +130,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const major = item.major;
             const duration = item.duration;
             const tempo = item.tempo;
-
-            // console.log(school, major, duration, tempo)
 
             const container = document.createElement('div');
             container.classList.add('education-container');
@@ -187,5 +184,78 @@ document.addEventListener('DOMContentLoaded', function() {
                 modalHidden = true;
             }
         });
+    });
+
+    const getGitAPI = async (exURL) => {
+
+        try {
+
+            const response = await fetch(exURL);
+
+            if(!response.ok) {
+
+                throw new Error(response.status);
+            };
+
+            const data = await response.json();
+
+            return data;
+
+        } catch (error) {
+            
+            console.log(error)
+        };
+    };
+
+    const showGitAPI = async () => {
+
+        const data = await getGitAPI(gitAPI);
+
+        let avatarUrl = "";
+
+        data.forEach((item) => {
+
+            let name = item.name.toUpperCase();
+            let repoUrl = item.html_url;
+            avatarUrl = item.owner.avatar_url;
+            console.log(item.name);
+        
+            const a = document.createElement('a');
+            const href = document.createAttribute('href');
+            const target = document.createAttribute('target');
+            const li = document.createElement('li');
+            a.innerHTML = name;
+            href.value = repoUrl;
+            target.value = "_blank";
+            a.setAttributeNode(href);
+            a.setAttributeNode(target);
+            li.appendChild(a);
+            reposList.appendChild(li);
+
+        });
+
+        const placeholderImg = document.getElementById('placeholder-img');
+        const avatar = document.createElement('img');
+        const src = document.createAttribute('src');
+        src.value = avatarUrl;
+        avatar.setAttributeNode(src);
+        avatar.classList.add("avatar");
+        placeholderImg.replaceWith(avatar);
+    };
+
+    showGitAPI();
+
+    expandBtn.addEventListener('click', function() {
+
+        if(listHidden === true) {
+            reposList.style.height = "fit-content";
+            expandBtn.innerHTML = "Minimize";
+            listHidden = false;
+        } else if (listHidden === false) {
+            reposList.style.height = "4rem";
+            expandBtn.innerHTML = "Expand";
+            listHidden = true;
+        };
+        
     });
 });
