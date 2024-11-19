@@ -512,6 +512,10 @@ footer p span {
         font-size: xx-large;
         line-height: 2.7rem;
     }
+
+    .card {
+        max-width: 50%;
+    }
 }
 /* END breakpoints för surfplatta */
 /* * */
@@ -549,12 +553,12 @@ footer p span {
     }
 
     #card-container {
-        width: 30%;
+        width: 35%;
         margin-top: 3rem;
     }
 
     .card {
-        width: 100%;
+        min-width: 100%;
     }
 
     #repos-list li {
@@ -565,6 +569,10 @@ footer p span {
 @media (min-width: 1080px) {
     .sticker-container.first {
         margin-right: 1rem;
+    }
+
+    #card-container {
+        width: 30%;
     }
 }
 
