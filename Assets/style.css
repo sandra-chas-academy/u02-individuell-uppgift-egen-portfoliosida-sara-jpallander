@@ -46,6 +46,10 @@ nav {
     width: fit-content;
 }
 
+.nav-list-desktop {
+    display: none;
+}
+
 #nav-list {
     display: none;
 }
@@ -156,70 +160,6 @@ main {
     margin: 1.5rem 0;
 }
 
-#card-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#card-container h2 {
-    color: var(--text-color);
-    margin: 1rem 0;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    border-radius: 10px;
-}
-
-#placeholder-img {
-    width: 3rem;
-    align-self: center;
-}
-
-.avatar {
-    height: fit-content;
-    border-radius: 10px 10px 0 0 ;
-}
-
-#repos-list {
-    height: 4rem;
-    overflow-y: hidden;
-    border: 2px solid var(--highlight);
-}
-
-.card ul li {
-    list-style: none;
-    border-bottom: 2px solid var(--highlight);
-    line-height: 1rem;
-    padding: 1rem;
-}
-
-.card ul li a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
-    letter-spacing: 1px;
-    transition: 0.3s;
-}
-
-.card ul li a:hover {
-    color: var(--highlight);
-}
-
-#expand-btn {
-    all: unset;
-    color: var(--highlight-decoration);
-    background-color: var(--highlight);
-    text-align: center;
-    padding: 1rem 0;
-    border-radius: 0 0 10px 10px;
-    cursor: pointer;
-}
-
 .tempo {
     width: 6rem;
     font-size: 0.9rem;
@@ -316,6 +256,71 @@ hr {
     border: 1px solid var(--misc);
 }
 
+
+#card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#card-container h2 {
+    color: var(--text-color);
+    margin: 1rem 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 10px;
+}
+
+#placeholder-img {
+    width: 3rem;
+    align-self: center;
+}
+
+.avatar {
+    height: fit-content;
+    border-radius: 10px 10px 0 0 ;
+}
+
+#repos-list {
+    height: 4rem;
+    overflow: hidden;
+    border: 2px solid var(--highlight);
+}
+
+.card ul li {
+    list-style: none;
+    border-bottom: 2px solid var(--highlight);
+    line-height: 1rem;
+    padding: 1rem;
+}
+
+.card ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.card ul li a:hover {
+    color: var(--highlight);
+}
+
+#expand-btn {
+    all: unset;
+    color: var(--highlight-decoration);
+    background-color: var(--highlight);
+    text-align: center;
+    padding: 1rem 0;
+    border-radius: 0 0 10px 10px;
+    cursor: pointer;
+}
+
 .sticker-container {
     display: flex;
     justify-content: center;
@@ -328,6 +333,26 @@ hr {
     background-image: linear-gradient(60deg, var(--highlight-decoration), var(--highlight));
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.back-to-top {
+    all: unset;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    color: var(--highlight);
+    background-color: var(--highlight-decoration);
+    border: 3px solid var(--highlight-decoration);
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+.btt-a {
+    text-decoration: none;
+}
+
+.back-to-top:hover {
+    border: 3px solid var(--highlight);
 }
 
 #contact {
@@ -442,11 +467,129 @@ footer p span {
         padding: 3rem;
     }
 
+    #email-module {
+        left: 3rem;
+    }
+
     main {
         margin: 2rem 4rem;
+    }
+
+    .card {
+        width: 70%;
     }
 }
 
 /* END breakpoints för mobil */
-
+/* * */
 /* Breakpoint för surfplatta */
+
+@media (min-width: 768px) {
+    main {
+        margin: 0 7rem;
+    }
+
+    .logo {
+        font-size: 19rem;
+        right: -1.7rem;
+        top: 1.2rem;
+    }
+
+   .nav {
+        margin-left: 3.5rem;
+    }
+
+    .social-media {
+        margin-top: 2rem;
+    }
+
+    #email-module {
+        left: 7rem;
+        font-size: large;
+    }
+
+    #hire-me-modal {
+        font-size: xx-large;
+        line-height: 2.7rem;
+    }
+}
+/* END breakpoints för surfplatta */
+/* * */
+/* Breakpoint för desktop */
+@media (min-width: 1008px) {
+    .nav {
+        display: none;
+    }
+
+    .logo {
+        font-size: 22rem;
+        right: -1.7rem;
+        top: -1rem;
+    }
+    
+    .about-me-flex {
+        display: flex;
+        justify-content: center;
+    }
+
+    .sticker.first {
+        font-size: 10rem;
+        margin-left: 5rem;
+    }
+    
+    #cv-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .cv {
+        width: 60%;
+    }
+
+    #card-container {
+        width: 30%;
+        margin-top: 3rem;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    #repos-list li {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 1080px) {
+    .sticker-container.first {
+        margin-right: 1rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .sticker-container.first {
+        margin-right: 2rem;
+    }
+}
+
+@media (min-width: 1366px) {
+    main {
+        margin: 0 12rem;
+    }
+
+    #email-module {
+        left: 12rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    html {
+        font-size: 20px;
+    }
+    
+    main {
+        margin: 0 15rem;
+    }
+}

@@ -17,7 +17,7 @@
 
 </head>
 <body>
-    <header>
+    <header id="header">
         <nav class="nav">
             <h2 class="menu-title">MENU <span id="menu-btn">▼</span></h2>
             <ul id="nav-list">
@@ -32,7 +32,6 @@
     </header>
 
     <main>
-        
         <div class="social-media">
             <p id="email-module">sara.j.pallander@gmail.com</p>
             <svg id="email-logo" class="email" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none"><g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round"></g><g><path fill="#000000" fill-rule="evenodd" d="M9.818.21a8 8 0 103.046 14.141.75.75 0 10-.912-1.19A6.5 6.5 0 1114.5 8v1c0 .908-.54 1.5-1.25 1.5-.4 0-.691-.157-.894-.399C12.142 9.847 12 9.463 12 9V4.75a.75.75 0 00-1.5 0v.127a4 4 0 10.449 5.825c.076.128.162.25.258.364.484.577 1.194.934 2.043.934C15.04 12 16 10.461 16 9V8A8 8 0 009.818.21zM10.5 8a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0z" clip-rule="evenodd"></path></g></svg>
@@ -40,36 +39,40 @@
             <a href="https://github.com/sara-jpallander" target="_blank"><svg class="github" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round"></g><g><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g transform="translate(-140.000000, -7559.000000)" fill="#000000"> <g transform="translate(56.000000, 160.000000)"> <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399"> </path> </g> </g> </g> </g></svg></a>
         </div>
 
-        <section class="about-me-section">
-            <h2 class="about-me" id="about-me">Hello, I'm <span id="animated-text">Sara</span> J. Pallander</h2>
-            <p>A multi-cultural girl set out to diversify a status-quo-at-default world. With my background in ocular healthcare 
-                I have a unique perspective when it comes to understanding how different people percieve visual stimulus, like how screens affect our eyes. 
-                With digitial media becoming evermore prevalent in our day to day lives I decided to branch out into the tech-industry 
-                where I can contribute a new kind of expertise to the landscape.
-            </p>
-            <h3 class="tagline">Now, I'm <span>(almost)</span> a Fullstack JavaScript Developer</h3>
-        </section>
-
-        <article class="sticker-container">
-            <h4 class="sticker">⭐</h4>
-        </article>
+        <div class="about-me-flex">
+            <section class="about-me-section">
+                <h2 class="about-me" id="about-me">Hello, I'm <span id="animated-text">Sara</span> J. Pallander</h2>
+                <p>A multi-cultural girl set out to diversify a status-quo-at-default world. With my background in ocular healthcare 
+                    I have a unique perspective when it comes to understanding how different people percieve visual stimulus, like how screens affect our eyes. 
+                    With digitial media becoming evermore prevalent in our day to day lives I decided to branch out into the tech-industry 
+                    where I can contribute a new kind of expertise to the landscape.
+                </p>
+                <h3 class="tagline">Now, I'm <span>(almost)</span> a Fullstack JavaScript Developer</h3>
+            </section>
+    
+            <article class="sticker-container first">
+                <h4 class="sticker first">⭐</h4>
+            </article>
+        </div>
 
         <div id="cv-section">
-            <section id="experience-work">
-                <article id="hire-me-modal">
-                    <button id="modal-close-btn">X</button>
-                    <h4>Sara J. Pallander</h4>
-                    <p>sara.j.pallander@gmail.com</p>
-                    <p>+46 (0)73 646 22 93</p>
-                </article>
-                <p id="hire-me-btn">Hire me!</p>
-                <h2>Work experience</h2>
-            </section>
-    
-            <section id="experience-education">
-                <h2>Education</h2>
-    
-            </section>
+            <div class="cv">
+                <section id="experience-work">
+                    <article id="hire-me-modal">
+                        <button id="modal-close-btn">X</button>
+                        <h4>Sara J. Pallander</h4>
+                        <p>sara.j.pallander@gmail.com</p>
+                        <p>+46 (0)73 646 22 93</p>
+                    </article>
+                    <p id="hire-me-btn">Hire me!</p>
+                    <h2>Work experience</h2>
+                </section>
+        
+                <section id="experience-education">
+                    <h2>Education</h2>
+        
+                </section>
+            </div>
 
             <section id="card-container">
                 <h2>My GitHub Projects</h2>
@@ -88,6 +91,8 @@
         </article>
 
         <section id="contact">
+            <a class="btt-a" href="#header"><button class="back-to-top">Back to top ^</button></a>
+            
             <h2>Contact me</h2>
             <p><strong>Email: </strong>sara.j.pallander@gmail.com</p>
             <p><strong>Phone: </strong>+46 (0)73 646 22 93</p>
