@@ -5,6 +5,7 @@
     --background: #D9D9D9;
     --text-color: #252723;
     --highlight: #CD4799;
+    --highlight-decoration: #ddc3d3;
     --misc: #696969;
 }
 
@@ -13,7 +14,17 @@
     :root {
         --background: #252723;
         --text-color: #D9D9D9;
-        --highlight: #FD43B6;
+        --highlight: #ff2395;
+        --highlight-decoration: #680038;
         --misc: #696969; 
     }
 } */
+
+/* Animations */
+@keyframes pink-rainbow-text {
+    0%   {color: #ddc3d3;}
+    25%  {color: #ff2395;}
+    50%  {color: #CD4799;}
+    75%  {color: #680038;}
+    100% {color: #ddc3d3;}
+}

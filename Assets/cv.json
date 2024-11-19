@@ -1,21 +1,21 @@
 {
     "work": [
         {
-            "company": "Apoteket",
-            "title": "Cashier & maintenance",
+            "company": "Apoteket AB",
+            "title": "Cashier",
             "duration": "Jun 2016 - Aug 2019",
             "tempo": "Part-time"
         },
 
         {
-            "company": "Synsam",
+            "company": "Synsam Group",
             "title": "Registered Optician",
             "duration": "Jul 2021 - Apr 2023",
             "tempo": "Full-time"
         },
 
         {
-            "company": "Actus People",
+            "company": "Actus People AB",
             "title": "Consultant Optician",
             "duration": "Apr 2023 - Current",
             "tempo": "Full-time"
@@ -24,24 +24,24 @@
 
     "education": [
         {
-            "school": "Rinmangymnasiet",
-            "major": "Natura Science Program",
+            "school": "Rinmangymnasiet (High School)",
+            "major": "Natural Science Program",
             "duration": "Aug 2014 - Jun 2017",
-            "tempo": "Full-time"
+            "tempo": "Diploma"
         },
 
         {
-            "school": "Karolinska Institute",
+            "school": "Karolinska Institute (University)",
             "major": "Optometry",
             "duration": "Aug 2018 - Jun 2021",
-            "tempo": "Full-time"
+            "tempo": "Bachelor"
         }, 
 
         {
-            "school": "Chas Academy",
+            "school": "Chas Academy (Higher Vocational Education)",
             "major": "Fullstack JavaScript",
             "duration": "Sep 2024 - Jun 2026",
-            "tempo": "Full-time"
+            "tempo": "Diploma"
         }
     ]
 
