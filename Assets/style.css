@@ -17,7 +17,6 @@ html {
 body {
     background-color: var(--background);
     font-family: 'Gabarito', 'Segoe UI', Arial, Helvetica, sans-serif;
-    min-width: 360px; 
     overflow-x: hidden;
 }
 
@@ -128,8 +127,8 @@ main {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
     position: absolute;
-    top: 16rem;
-    left: 2rem;
+    top: 15rem;
+    left: 2.5rem;
 
     display: none;
 }
@@ -160,6 +159,11 @@ main {
     margin: 1.5rem 0;
 }
 
+#cv-section h2 {
+    margin: 0.5rem 0;
+    color: var(--text-color);
+}
+
 .tempo {
     width: 6rem;
     font-size: 0.9rem;
@@ -174,8 +178,19 @@ main {
     margin-bottom: 3rem;
 }
 
-#experience-work h2, #experience-education h2 {
-    margin: 0.5rem 0;
+#tech-stack-container {
+    padding: 1rem 0 0.5rem 0;
+    display: flex;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: fit-content;
+    color: var(--highlight);
+    background-color: var(--highlight-decoration);
+    padding: 0.5rem 0.8rem;
+    border-radius: 18px;
 }
 
 #hire-me-modal {
@@ -212,7 +227,7 @@ main {
 }
 
 #hire-me-btn {
-    margin: 0.5rem 0;
+    margin: 0.5rem 0 0.8rem 0;
     padding: 0.7rem;
     border: 0.15rem solid var(--highlight-decoration);
     background-color: var(--highlight-decoration);
@@ -289,12 +304,12 @@ hr {
 #repos-list {
     height: 4rem;
     overflow: hidden;
-    border: 2px solid var(--highlight);
+    border: 2px solid var(--highlight-decoration);
 }
 
 .card ul li {
     list-style: none;
-    border-bottom: 2px solid var(--highlight);
+    border-bottom: 2px solid var(--highlight-decoration);
     line-height: 1rem;
     padding: 1rem;
 }
@@ -313,8 +328,8 @@ hr {
 
 #expand-btn {
     all: unset;
-    color: var(--highlight-decoration);
-    background-color: var(--highlight);
+    color: var(--highlight);
+    background-color: var(--highlight-decoration);
     text-align: center;
     padding: 1rem 0;
     border-radius: 0 0 10px 10px;
@@ -380,20 +395,27 @@ hr {
 
 footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    
+    padding: 1rem;
+    background-color: var(--background);
 }
 
-footer p {
+.footer-tagline, .footer-text {
     text-align: center;
-    padding: 0.8rem;
-    color: var(--text-color);
-    background-color: var(--background);
     width: 100%;
+}
+
+.footer-tagline {
+    color: var(--text-color);
 }
 
 footer p span {
     color: var(--highlight);
+}
+
+.footer-text {
+    color: var(--misc);
 }
 
 
@@ -403,8 +425,8 @@ footer p span {
 
     .logo {
         font-size: 8rem;
-        right: -1.5rem;
-        top: 9.5rem;
+        right: -1rem;
+        top: 9rem;
     }
 
     .menu-title {
@@ -425,10 +447,6 @@ footer p span {
         height: 2.2rem;
     }
 
-    footer {
-        font-size: small;
-    }
-
     main {
         margin: 2rem 2.7rem;
         font-size: 14px;
@@ -441,6 +459,29 @@ footer p span {
     .card {
         width: 100%;
     }
+
+    .sticker {
+        font-size: 5rem;
+    }
+
+    .back-to-top {
+        font-size: small;
+        padding: 0.3rem 0.5rem;
+    }
+
+    #contact {
+        font-size: 0.9rem;
+    }
+
+    .contact-me-socials svg, .contact-me-socials svg path {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    footer {
+        font-size: small;
+    }
+
 }
 
 @media (min-width: 450px) {
@@ -448,11 +489,21 @@ footer p span {
     .logo {
         font-size: 12rem;
         right: -1.2rem;
-        top: 7.7rem;
+        top: 7.5rem;
     }
 
     .card {
-        width: 85%;
+        width: 70%;
+    }
+
+    #email-module {
+        left: 2.7rem;
+        top: 16rem;
+    }
+
+    .contact-me-socials svg, .contact-me-socials svg path {
+        width: 2.5rem;
+        height: 2.5rem;
     }
 }
 
@@ -469,7 +520,8 @@ footer p span {
     }
 
     #email-module {
-        left: 3rem;
+        left: 3.7rem;
+        top: 16rem;
     }
 
     main {
@@ -477,7 +529,7 @@ footer p span {
     }
 
     .card {
-        width: 70%;
+        width: 60%;
     }
 }
 
@@ -488,12 +540,13 @@ footer p span {
 @media (min-width: 768px) {
     main {
         margin: 0 7rem;
+        font-size: 19px;
     }
 
     .logo {
         font-size: 19rem;
         right: -1.7rem;
-        top: 1.2rem;
+        top: 1.5rem;
     }
 
    .nav {
@@ -505,8 +558,8 @@ footer p span {
     }
 
     #email-module {
-        left: 7rem;
-        font-size: large;
+        left: 6.5rem;
+        top: 16rem;
     }
 
     #hire-me-modal {
@@ -516,6 +569,10 @@ footer p span {
 
     .card {
         max-width: 50%;
+    }
+
+    .card ul li a {
+        font-size: 1rem;
     }
 }
 /* END breakpoints för surfplatta */

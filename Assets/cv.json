@@ -40,9 +40,34 @@
         {
             "school": "Chas Academy (Higher Vocational Education)",
             "major": "Fullstack JavaScript",
-            "duration": "Sep 2024 - Jun 2026",
+            "duration": "Sep 2024 - Current",
             "tempo": "Diploma"
         }
-    ]
+    ],
 
+    "techstack": [
+        {
+            "language": "HTML"
+        },
+
+        {
+            "language": "CSS"
+        },
+
+        {
+            "language": "JavaScript"
+        },
+
+        {
+            "language": "TypeScript"
+        },
+
+        {
+            "language": "React.js"
+        },
+
+        {
+            "language": "Figma"
+        }
+    ]
 }

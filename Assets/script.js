@@ -50,10 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 5000);
     });
 
-    /* emailLogo.addEventListener('mouseleave', function () {
-        emailModule.style.display = "none";
-    }); */
-
     const getCV = async (exURL) => {
 
         try {
@@ -82,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const workExp = data.work;
         const educationExp = data.education;
+        const techStack = data.techstack;
 
         workExp.forEach((item) => {
 
@@ -166,6 +163,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
         }); 
 
+        techStack.forEach((item) => {
+
+            const language = item.language;
+
+            const container = document.getElementById('tech-stack-container');
+
+            const element = document.createElement('p');
+            element.classList.add('item');
+            element.innerHTML = language;
+            container.appendChild(element);
+        });
     };
 
     showCV();
@@ -218,7 +226,6 @@ document.addEventListener('DOMContentLoaded', function() {
             let name = item.name.toUpperCase();
             let repoUrl = item.html_url;
             avatarUrl = item.owner.avatar_url;
-            console.log(item.name);
         
             const a = document.createElement('a');
             const href = document.createAttribute('href');
