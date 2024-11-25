@@ -35,7 +35,7 @@ header {
     font-weight: 500;
     position: absolute;
     right: 0; /* Fick lära mig att overflow hidden ignoreras i mobila webbläsare så jag får visa hela "loggan" i mobilversionerna */
-    top: 9rem;
+    top: 11rem;
     color: var(--background);
     z-index: 0;
 }
@@ -437,7 +437,7 @@ footer p span {
     .logo {
         font-size: 7.5rem;
         right: 0;
-        top: 10rem;
+        top: 11rem;
     }
 
     .menu-title {
