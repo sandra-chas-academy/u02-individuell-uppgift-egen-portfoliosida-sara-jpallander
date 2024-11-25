@@ -32,17 +32,18 @@ header {
 }
 
 .logo {
-    font-size: 9rem;
     font-weight: 500;
     position: absolute;
-    right: -0.7rem;
-    top: 10rem;
+    right: 0; /* Fick lära mig att overflow hidden ignoreras i mobila webbläsare så jag får visa hela "loggan" i mobilversionerna */
+    top: 9rem;
     color: var(--background);
+    z-index: 0;
 }
 
 nav {
     padding: 2rem;
     width: fit-content;
+    z-index: 0;
 }
 
 #nav-list-desktop {
@@ -89,6 +90,10 @@ nav {
 
 main {
     margin: 2rem 3rem;
+}
+
+main * {
+    z-index: 1;
 }
 
 .social-media {
@@ -430,9 +435,9 @@ footer p span {
 @media (max-width: 449px) {
 
     .logo {
-        font-size: 8rem;
-        right: -1rem;
-        top: 9rem;
+        font-size: 7.5rem;
+        right: 0;
+        top: 10rem;
     }
 
     .menu-title {
@@ -493,9 +498,7 @@ footer p span {
 @media (min-width: 450px) {
 
     .logo {
-        font-size: 12rem;
-        right: -1.2rem;
-        top: 7.5rem;
+        font-size: 10rem;
     }
 
     .card {
@@ -517,7 +520,6 @@ footer p span {
 
     .logo {
         font-size: 15rem;
-        right: -1.7rem;
         top: 5rem;
     }
 
@@ -551,7 +553,6 @@ footer p span {
 
     .logo {
         font-size: 19rem;
-        right: -1.7rem;
         top: 1.5rem;
     }
 
