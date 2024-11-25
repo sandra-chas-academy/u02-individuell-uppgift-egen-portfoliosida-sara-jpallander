@@ -2,7 +2,7 @@
 
 ## Sara Jowhar Pallander
 
-<strong>Länk: </strong> 
+<strong>Länk: </strong> https://almostsara.netlify.app
 
 ### Sammanfattning av projektet
 Portfoliosida utifrån egen designskiss. Började utifrån mobile-first och utökade till desktop under utvecklingssprocessen. Tog inspiration från u01:an för CV-layouten och light-/dark-mode anpassning. 

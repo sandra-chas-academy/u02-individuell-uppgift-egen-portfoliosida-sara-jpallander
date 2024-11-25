@@ -45,7 +45,7 @@ nav {
     width: fit-content;
 }
 
-.nav-list-desktop {
+#nav-list-desktop {
     display: none;
 }
 
@@ -589,10 +589,46 @@ footer p span {
         display: none;
     }
 
+    .top-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+    }
+
+    .menu-item {
+        z-index: 1;
+        margin-top: 2rem;
+        padding: 0;
+    }
+    
+    .menu-item:hover {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .menu-item a {
+        color: var(--misc);
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+
+    .menu-item a:hover {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    #nav-list-desktop {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
     .logo {
         font-size: 22rem;
         right: -1.7rem;
         top: -1rem;
+        z-index: 0;
     }
     
     .about-me-flex {
