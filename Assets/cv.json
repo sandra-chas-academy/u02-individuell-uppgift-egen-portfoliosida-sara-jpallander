@@ -55,15 +55,19 @@
         },
 
         {
-            "language": "JavaScript"
+            "language": "Javascript"
         },
 
         {
-            "language": "TypeScript"
+            "language": "Typescript"
         },
 
         {
-            "language": "React.js"
+            "language": "React"
+        },
+
+        {
+            "language": "Node"
         },
 
         {
