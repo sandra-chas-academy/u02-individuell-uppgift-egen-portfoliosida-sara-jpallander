@@ -43,10 +43,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     emailLogo.addEventListener('click', function () {
-        emailModule.style.display = "block";
+        
+        emailModule.style.opacity = "100";
 
         setTimeout(() => {
-            emailModule.style.display = "none";
+            emailModule.style.opacity = "0";
         }, 5000);
     });
 
