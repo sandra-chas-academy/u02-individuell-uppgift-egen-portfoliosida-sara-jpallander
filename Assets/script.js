@@ -219,26 +219,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const data = await getGitAPI(gitAPI);
 
-        let avatarUrl = "";
+        let avatarUrl;
 
         data.forEach((item) => {
 
-            let name = item.name.toUpperCase();
-            let repoUrl = item.html_url;
-            avatarUrl = item.owner.avatar_url;
-        
-            const a = document.createElement('a');
-            const href = document.createAttribute('href');
-            const target = document.createAttribute('target');
-            const li = document.createElement('li');
-            a.innerHTML = name;
-            href.value = repoUrl;
-            target.value = "_blank";
-            a.setAttributeNode(href);
-            a.setAttributeNode(target);
-            li.appendChild(a);
-            reposList.appendChild(li);
+            let visibility = item.visibility; /* För att bara ta fram publika repo */
+            
+            if (visibility === "public") {
 
+                let description = item.description;
+                let name = item.name.toUpperCase();
+                let repoUrl = item.html_url;
+                avatarUrl = item.owner.avatar_url;
+                
+                const a = document.createElement('a');
+                const href = document.createAttribute('href');
+                const target = document.createAttribute('target');
+                const p = document.createElement('p');
+                const li = document.createElement('li');
+                a.innerHTML = name;
+                href.value = repoUrl;
+                target.value = "_blank";
+                a.setAttributeNode(href);
+                a.setAttributeNode(target);
+                p.classList.add('repo-description');
+                p.innerHTML = description;
+                li.appendChild(a);
+                li.appendChild(p);
+                reposList.appendChild(li);
+            };
         });
 
         const placeholderImg = document.getElementById('placeholder-img');

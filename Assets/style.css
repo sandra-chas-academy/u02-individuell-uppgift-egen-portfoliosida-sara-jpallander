@@ -294,6 +294,7 @@ hr {
 #placeholder-img {
     width: 3rem;
     align-self: center;
+    margin: 2rem 0;
 }
 
 .avatar {
@@ -324,6 +325,11 @@ hr {
 
 .card ul li a:hover {
     color: var(--highlight);
+}
+
+.repo-description {
+    color: var(--misc);
+    margin-top: 0.3rem;
 }
 
 #expand-btn {
