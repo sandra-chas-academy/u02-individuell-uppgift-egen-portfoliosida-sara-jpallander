@@ -55,6 +55,10 @@
     },
 
     {
+      "language": "Figma"
+    },
+
+    {
       "language": "Tailwind"
     },
 
@@ -67,7 +71,7 @@
     },
 
     {
-      "language": "React.js"
+      "language": "React"
     },
 
     {
@@ -79,7 +83,15 @@
     },
 
     {
-      "language": "Figma"
+      "language": "Express.js"
+    },
+
+    {
+      "language": "MySQL"
+    },
+
+    {
+      "language": "Prisma (ORM)"
     }
   ]
 }
