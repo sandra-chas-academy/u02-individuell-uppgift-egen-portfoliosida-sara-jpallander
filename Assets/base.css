@@ -1,0 +1,30 @@
+/* Light mode */
+@media (prefers-color-scheme: light) {
+    :root {
+        --background: #e9e9e9;
+        --text-color: #252723;
+        --highlight: #CD4799;
+        --highlight-decoration: #ddc3d3;
+        --misc: #696969;
+    }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #1a1b19;
+        --text-color: #e9e9e9;
+        --highlight: #ff2395;
+        --highlight-decoration: #680038;
+        --misc: #727272; 
+    }
+}
+
+/* Animations */
+@keyframes pink-rainbow-text {
+    0%   {color: #ddc3d3;}
+    25%  {color: #ff2395;}
+    50%  {color: #CD4799;}
+    75%  {color: #680038;}
+    100% {color: #ddc3d3;}
+}

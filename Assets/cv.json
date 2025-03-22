@@ -1,0 +1,97 @@
+{
+  "work": [
+    {
+      "company": "Apoteket AB",
+      "title": "Cashier",
+      "duration": "Jun 2016 - Aug 2019",
+      "tempo": "Part-time"
+    },
+
+    {
+      "company": "Synsam Group",
+      "title": "Registered Optician",
+      "duration": "Jul 2021 - Apr 2023",
+      "tempo": "Full-time"
+    },
+
+    {
+      "company": "Actus People AB",
+      "title": "Consultant Optician",
+      "duration": "Apr 2023 - Current",
+      "tempo": "Full-time"
+    }
+  ],
+
+  "education": [
+    {
+      "school": "Rinmangymnasiet (High School)",
+      "major": "Natural Science Program",
+      "duration": "Aug 2014 - Jun 2017",
+      "tempo": "Diploma"
+    },
+
+    {
+      "school": "Karolinska Institute (University)",
+      "major": "Optometry",
+      "duration": "Aug 2018 - Jun 2021",
+      "tempo": "Bachelor"
+    },
+
+    {
+      "school": "Chas Academy (Higher Vocational Education)",
+      "major": "Fullstack JavaScript",
+      "duration": "Sep 2024 - Current",
+      "tempo": "Diploma"
+    }
+  ],
+
+  "techstack": [
+    {
+      "language": "HTML"
+    },
+
+    {
+      "language": "CSS"
+    },
+
+    {
+      "language": "Figma"
+    },
+
+    {
+      "language": "Tailwind"
+    },
+
+    {
+      "language": "Javascript"
+    },
+
+    {
+      "language": "Typescript"
+    },
+
+    {
+      "language": "React"
+    },
+
+    {
+      "language": "Next.js"
+    },
+
+    {
+      "language": "Vite"
+    },
+
+    {
+      "language": "Express.js"
+    },
+
+    {
+      "language": "MySQL"
+    },
+
+    {
+      "language": "Prisma (ORM)"
+    }
+  ]
+}
